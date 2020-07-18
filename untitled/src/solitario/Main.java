@@ -20,11 +20,13 @@ public class Main {
 
             //implementato switch case
             switch (choose) {
+
                 //Pick 1 card from deck
                 case 1:
                     System.out.println(solitaire.toString());
                     solitaire.showCard();
                     break;
+
                     //Pick card from deck and move to field
                 case 2:
                     destRow = input.nextInt();
@@ -32,6 +34,7 @@ public class Main {
                     solitaire.moveCardFromDeck(destRow, destCol);
                     System.out.println(solitaire.toString());
                     break;
+
                     //Move card inside field
                 case 5:
                     startRow = input.nextInt();
@@ -39,6 +42,15 @@ public class Main {
                     destRow = input.nextInt();
                     destCol = input.nextInt();
                     solitaire.moveCardFromGrid(startRow,startCol,destRow,destCol);
+                    System.out.println(solitaire.toString());
+                    break;
+
+                case 6:
+                   /* startRow = input.nextInt();
+                    startCol = input.nextInt();
+                    destRow = input.nextInt();
+                    destCol = input.nextInt();*/
+                    solitaire.moveCardGroup(2,0,1,1);
                     System.out.println(solitaire.toString());
                     break;
                 default:
